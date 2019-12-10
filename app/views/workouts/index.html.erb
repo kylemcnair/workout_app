@@ -1,0 +1,18 @@
+<h1>
+  Workouts
+</h1>
+
+<table>
+    <tr>
+      <th>Title</th>
+      <th>Created At</th>
+    </tr>
+
+    <% @workouts.each do |workout| %>
+  <tr>
+    <td><%= workout.title %></td>
+    <td><%= workout.created_at %></td>
+  </tr>
+
+  <% end %>
+</table>
