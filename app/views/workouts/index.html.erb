@@ -6,12 +6,15 @@
     <tr>
       <th>Title</th>
       <th>Created At</th>
+      <th>Description</th>
     </tr>
 
     <% @workouts.each do |workout| %>
   <tr>
     <td><%= workout.title %></td>
-    <td><%= workout.created_at %></td>
+    <td><%= workout.created_at.strftime("%m/%d/%Y") %></td>
+    <td><%= workout.description %></td>
+
   </tr>
 
   <% end %>
