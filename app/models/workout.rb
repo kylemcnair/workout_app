@@ -12,4 +12,5 @@
 #
 
 class Workout < ActiveRecord::Base
+  enum workout_type: %i[running cycling cobbling rowing] 
 end
