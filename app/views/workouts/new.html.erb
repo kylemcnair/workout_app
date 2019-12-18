@@ -2,7 +2,6 @@
   New Workouts
 </h1>
 
-
 <%= form_for(@workout) do |f| %>
   <div class="field">
     <%= f.label :title %>
@@ -11,6 +10,14 @@
   <div class="field">
     <%= f.label :description %>
     <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :workout_type %>
+    <%= f.text_field :workout_type %>
+  </div>
+  <div class="field">
+    <%= f.label :creator %>
+    <%= f.text_field :creator %>
   </div>
   <div>
     <%= f.submit %>
