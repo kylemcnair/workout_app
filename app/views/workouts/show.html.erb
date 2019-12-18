@@ -2,6 +2,18 @@
   Latest Workout!
 </h1>
 
+<table>
+    <tr>
+      <th>Title</th>
+      <th>Created At</th>
+      <th>Description</th>
+    </tr>
+
     <td><%= @workout&.title %></td>
     <td><%= @workout.created_at.strftime("%m/%d/%Y") %></td>
     <td><%= @workout&.description %></td>
+
+  </table>
+
+
+<img src="https://tech.mn/wp-content/uploads/sites/1/2014/03/highfive.png" />

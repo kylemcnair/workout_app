@@ -2,7 +2,9 @@
   Workouts
 </h1>
 
-<table>
+<%= button_to "Add workout", new_workout_path(@workouts), :method => "get" %>
+
+<table width="50%" >
     <tr>
       <th>Title</th>
       <th>Created At</th>
