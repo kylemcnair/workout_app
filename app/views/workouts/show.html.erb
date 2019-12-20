@@ -11,7 +11,7 @@
       <th>Creator</th>
     </tr>
 
-    <td><%= @workout.title.titleize %></td>
+    <td><%= @workout.title&.titleize %></td>
     <td><%= @workout.created_at.strftime("%m/%d/%Y") %></td>
     <td><%= @workout.description %></td>
     <td><%= @workout.workout_type %></td>
@@ -21,3 +21,6 @@
 
 
 <img src="https://tech.mn/wp-content/uploads/sites/1/2014/03/highfive.png" />
+
+
+<%= button_to "Back", workouts_path(@workouts), :method => "get" %>
