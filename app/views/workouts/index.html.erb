@@ -12,12 +12,11 @@
     </tr>
 
     <% @workouts.each do |workout| %>
-  <tr>
-    <td><%= workout.title %></td>
-    <td><%= workout.created_at.strftime("%m/%d/%Y") %></td>
-    <td><%= workout.description %></td>
-
-  </tr>
-
+      <tr>
+        <td><%= workout.title %></td>
+        <td><%= workout.created_at.strftime("%m/%d/%Y") %></td>
+        <td><%= workout.description %></td>
+        <td><%= button_to "View workout", workout_path(workout), :method => "get" %></td>
+      </tr>
   <% end %>
 </table>
