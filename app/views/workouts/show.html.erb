@@ -18,6 +18,7 @@
     <td><%= @workout.creator %></td>
 
     <td><%= button_to "Delete workout", workout_path(@workout), :method => "delete" %></td>
+    <td><%= button_to "Edit workout", edit_workout_path(@workout), :method => "get" %></td>
 
 
   </table>
