@@ -1,0 +1,21 @@
+<%= form_for(@workout) do |f| %>
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :workout_type %>
+    <%= f.select :workout_type, Workout.workout_types.to_a.map{ |key_and_index| [key_and_index[0].titleize, key_and_index[0]]} %>
+  </div>
+  <div class="field">
+    <%= f.label :creator %>
+    <%= f.text_field :creator %>
+  </div>
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>
