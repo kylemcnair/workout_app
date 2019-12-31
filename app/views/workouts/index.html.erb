@@ -17,6 +17,7 @@
         <td><%= workout.created_at.strftime("%m/%d/%Y") %></td>
         <td><%= workout.description %></td>
         <td><%= button_to "View workout", workout_path(workout), :method => "get" %></td>
+        <td><%= button_to "Edit workout", edit_workout_path(workout), :method => "get" %></td>
       </tr>
   <% end %>
 </table>
