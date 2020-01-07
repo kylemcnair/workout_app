@@ -1,5 +1,11 @@
 <% @workout.errors.full_messages.each do |message| %>
-  <p> <font color="red"> <%= message %> </font> </p>
+  <div class="row flex-spaces">
+    <input class="alert-state" id="alert-5" type="checkbox">
+    <div class="alert alert-danger dismissible">
+      <font color="red"> <%= message %> </font>
+      <label class="btn-close" for="alert-5">X</label>
+    </div>
+  </div>
 <% end %>
 
 <%= form_for(@workout) do |f| %>
