@@ -1,3 +1,7 @@
+<% @workout.errors.full_messages.each do |message| %>
+  <p> <font color="red"> <%= message %> </font> </p>
+<% end %>
+
 <%= form_for(@workout) do |f| %>
   <div class="field">
     <%= f.label :title %>
