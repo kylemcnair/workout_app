@@ -13,5 +13,5 @@
 
 class Workout < ActiveRecord::Base
   enum workout_type: %i[running cycling cobbling rowing]
-  validates :creator, presence: true
+  validates :creator, :title, presence: true
 end
