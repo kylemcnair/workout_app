@@ -9,13 +9,23 @@
       <th>Description</th>
       <th>Workout Type</th>
       <th>Creator</th>
+      <th>Comments</th>
+
     </tr>
+
+
+
 
     <td><%= @workout.title&.titleize %></td>
     <td><%= @workout.created_at.strftime("%m/%d/%Y") %></td>
     <td><%= @workout.description %></td>
     <td><%= @workout.workout_type %></td>
     <td><%= @workout.creator %></td>
+
+    <% @workout.comments.each do |comment| %>
+      <td><%= comment.description %></td>
+    <% end %>
+
 
     <td><%= button_to "Delete workout", workout_path(@workout), :method => "delete" %></td>
     <td><%= button_to "Edit workout", edit_workout_path(@workout), :method => "get" %></td>
@@ -24,7 +34,10 @@
   </table>
 
 
+
 <img src="https://tech.mn/wp-content/uploads/sites/1/2014/03/highfive.png" />
+
+<%= render 'comments/form' %>
 
 
 <%= button_to "Back", workouts_path(@workouts), :method => "get" %>
